@@ -12,31 +12,31 @@ import matplotlib.pyplot as plt
 
 
 for i in range(0,4):
-  p=0
+  p=0.7
   x=[]
   y=[]
-  for j in range(0,50):
+  for j in range(0,200):
     x.append(p)
-    p=p+0.1
+    p=p+0.001
     y.append(avgs[4*j+i])
    
 
   plt.plot(x, y)
-  plt.xlabel('loss probability')
+  plt.xlabel('bottleneck load')
   plt.ylabel('transfer time')
 plt.show()
 
 for i in range(0,4):
-  p=0
+  p=0.7
   x=[]
   y=[]
-  for j in range(0,50):
+  for j in range(0,200):
     x.append(p)
-    p=p+0.1
+    p=p+0.001
     y.append(500/avgs[4*j+i])
    
 
   plt.plot(x, y)
-  plt.xlabel('loss probability')
+  plt.xlabel('bottleneck load')
   plt.ylabel('throughput')
 plt.show()

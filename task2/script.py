@@ -34,3 +34,4 @@ for g in strs:
   f.write("\n")
   print("Class "+str(c)+", Mean Transfer Time: "+str(avg)+"s, CI: "+str(st.t.interval(alpha=0.95, df=len(gfg_data)-1, loc=np.mean(gfg_data), scale=st.sem(gfg_data)))+", Mean Throughput: "+str(500*1460*8/(avg*1000000))+" mbps")
   c = c+1
+
